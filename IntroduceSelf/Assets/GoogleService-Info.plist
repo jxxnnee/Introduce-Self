@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>95096524964-u7m4h9u697idjdqokbmgkvmp4gl4m3cd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.95096524964-u7m4h9u697idjdqokbmgkvmp4gl4m3cd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAmvEiN6lKtU8nNhwLg6bTbF83ZSI5fEDE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>95096524964</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kxunmeen.RxIntroduce</string>
+	<key>PROJECT_ID</key>
+	<string>rxintroduce</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rxintroduce.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:95096524964:ios:5d159358dfabdad2ef5631</string>
+	<key>DATABASE_URL</key>
+	<string>https://rxintroduce.firebaseio.com</string>
+</dict>
+</plist>
