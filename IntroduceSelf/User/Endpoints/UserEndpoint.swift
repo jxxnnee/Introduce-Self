@@ -23,7 +23,7 @@ enum UserEndpoint: APIConfiguration {
     var path: String {
         switch  self {
         case .emailRegister:
-            return "/users/email"
+            return "/users"
         }
     }
     

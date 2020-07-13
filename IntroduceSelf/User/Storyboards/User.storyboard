@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="riC-cA-a8o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EdX-EL-voL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,7 +11,7 @@
         <!--Email Login View Controller-->
         <scene sceneID="n8k-HG-z2R">
             <objects>
-                <viewController storyboardIdentifier="EmailLoginViewController" id="riC-cA-a8o" customClass="EmailLoginViewController" customModule="RxIntroduce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmailLoginViewController" id="riC-cA-a8o" customClass="EmailLoginViewController" customModule="IntroduceSelf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bHx-EP-arM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +87,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AOb-XQ-YNz"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Hd9-91-rSd"/>
                     <connections>
                         <outlet property="emailLogin" destination="jAP-IO-NnU" id="rLi-zb-8hz"/>
                         <outlet property="signUp" destination="KrP-GX-EC4" id="5PO-vT-kli"/>
@@ -96,12 +97,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dnd-Vq-PMn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15.942028985507248" y="34.821428571428569"/>
+            <point key="canvasLocation" x="894.20289855072474" y="34.821428571428569"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="cD9-d2-q4B">
             <objects>
-                <viewController storyboardIdentifier="signUpViewController" id="rcb-Qm-eRv" customClass="SignUpViewController" customModule="RxIntroduce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="rcb-Qm-eRv" customClass="SignUpViewController" customModule="IntroduceSelf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sc2-L7-Cpv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,8 +118,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppd-cA-JvS" userLabel="BackBtn">
+                                <rect key="frame" x="20" y="64" width="54" height="34"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8cU-tb-nmW">
-                                <rect key="frame" x="0.0" y="64" width="414" height="768"/>
+                                <rect key="frame" x="0.0" y="102" width="414" height="730"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
                         </subviews>
@@ -127,7 +132,9 @@
                             <constraint firstItem="3Ek-JX-1YG" firstAttribute="centerX" secondItem="Sc2-L7-Cpv" secondAttribute="centerX" id="6Du-TE-fHL"/>
                             <constraint firstItem="3Ek-JX-1YG" firstAttribute="leading" secondItem="Sc2-L7-Cpv" secondAttribute="leading" id="jC3-Fz-GTV"/>
                             <constraint firstItem="8cU-tb-nmW" firstAttribute="leading" secondItem="rwX-I5-Qm0" secondAttribute="leading" id="jMM-Hi-lU5"/>
-                            <constraint firstItem="8cU-tb-nmW" firstAttribute="top" secondItem="rwX-I5-Qm0" secondAttribute="top" constant="20" id="rto-ZY-Ok6"/>
+                            <constraint firstItem="ppd-cA-JvS" firstAttribute="leading" secondItem="rwX-I5-Qm0" secondAttribute="leading" constant="20" id="nbT-5J-sM1"/>
+                            <constraint firstItem="ppd-cA-JvS" firstAttribute="top" secondItem="rwX-I5-Qm0" secondAttribute="top" constant="20" id="rV7-xg-Ljy"/>
+                            <constraint firstItem="8cU-tb-nmW" firstAttribute="top" secondItem="ppd-cA-JvS" secondAttribute="bottom" constant="40" id="sjs-A0-w4l"/>
                             <constraint firstItem="rwX-I5-Qm0" firstAttribute="trailing" secondItem="8cU-tb-nmW" secondAttribute="trailing" id="u6M-7l-K9r"/>
                             <constraint firstAttribute="bottom" secondItem="3Ek-JX-1YG" secondAttribute="bottom" id="xZQ-sb-LZh"/>
                             <constraint firstAttribute="trailing" secondItem="3Ek-JX-1YG" secondAttribute="trailing" id="y9l-UO-y0H"/>
@@ -135,13 +142,31 @@
                         <viewLayoutGuide key="safeArea" id="rwX-I5-Qm0"/>
                     </view>
                     <connections>
+                        <outlet property="backBtn" destination="ppd-cA-JvS" id="Ge5-QP-9yC"/>
                         <outlet property="infoSV" destination="8cU-tb-nmW" id="rjR-Rt-nf2"/>
                         <outlet property="signUpBtn" destination="3Ek-JX-1YG" id="67z-BV-gam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIr-gG-gf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.92753623188412" y="34.821428571428569"/>
+            <point key="canvasLocation" x="1655.072463768116" y="34.821428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rfg-SQ-8tS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="EdX-EL-voL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yGd-Oa-GCF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="riC-cA-a8o" kind="relationship" relationship="rootViewController" id="yne-fx-t33"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXa-i7-Bya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15.942028985507248" y="34.821428571428569"/>
         </scene>
     </scenes>
     <resources>

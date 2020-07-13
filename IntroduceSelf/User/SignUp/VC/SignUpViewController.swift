@@ -19,15 +19,16 @@ class SignUpViewController: UIViewController {
     var tappedCount = 0
     var stackCount = 0
 
-    var isNameValid = true
-    var isUserEmailValid = true
-    var isFirstPwValid = true
-    var isConfirmPwValid = true
-    var isBirthdayValid = true
-    var isPhoneValid = true
+    var isNameValid = false
+    var isUserEmailValid = false
+    var isFirstPwValid = false
+    var isConfirmPwValid = false
+    var isBirthdayValid = false
+    var isPhoneValid = false
     
     @IBOutlet weak var infoSV: UIStackView!
     @IBOutlet weak var signUpBtn: UIButton!
+    @IBOutlet weak var backBtn: UIButton!
     lazy var nameView = UIView()
     lazy var userName = UITextField()
     
@@ -53,6 +54,12 @@ class SignUpViewController: UIViewController {
 extension SignUpViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let img = UIImage(named: "BackBtn") {
+            
+            self.backBtn.setTitle("", for: .normal)
+            self.backBtn.setImage(img, for: .normal)
+        }
         
         self.setRxSignUpBtn()
         self.appearNextUIView(self.tappedCount)
@@ -140,7 +147,12 @@ extension SignUpViewController {
             }
         case 5:
             if self.checkEnableSignUp() {
-                
+                viewModel.registerEmail(completion: {
+                    print("SUCCESS")
+                    self.navigationController?.popViewController(animated: true)
+                }, error: {
+                    print("FAIL")
+                })
             } else {
                 print("PHONE IS NOT VALID")
             }
@@ -165,11 +177,12 @@ extension SignUpViewController {
     }
     
     @objc func tapDone() {
-       if let datePicker = self.birthday.inputView as? UIDatePicker { // 2-1
-           let dateformatter = DateFormatter() // 2-2
+        if let datePicker = self.birthday.inputView as? UIDatePicker { // 2-1
+            let dateformatter = DateFormatter() // 2-2
             dateformatter.dateFormat = "yyyy년 MM월 dd일"
-           self.birthday.text = dateformatter.string(from: datePicker.date) //2-4
-       }
+            self.birthday.text = dateformatter.string(from: datePicker.date) //2-4
+            viewModel.checkBirth(dateformatter.string(from: datePicker.date))
+        }
         self.isBirthdayValid = true
         self.birthday.resignFirstResponder() // 2-5
     }

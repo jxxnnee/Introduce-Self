@@ -18,6 +18,7 @@ class EmailLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         setInfo()
         clickedLoginButtons()
         tappedSignUpButton()
@@ -87,11 +88,17 @@ class EmailLoginViewController: UIViewController {
     
     func tappedSignUpButton() {
         self.signUp.rx.tap.subscribe(onNext: { (_) in
-            guard let signUp = self.storyboard?.instantiateViewController(withIdentifier: "signUpViewController") as? SignUpViewController else {
-                return
+            print("Hello")
+            if let keyWindow = UIApplication.shared.keyWindow?.rootViewController {
+                print("ROOT VIEW CONTROLLER: ", keyWindow)
+                
+                let vc = UIStoryboard(name: "User", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+                
+                print("SingUpViewController: ", vc)
+                
+                self.navigationController?.pushViewController(vc, animated: true)
             }
             
-            self.present(signUp, animated: true, completion: nil)
             
         })
         .disposed(by: self.disposebag)

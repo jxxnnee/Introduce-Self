@@ -21,7 +21,7 @@
 		CB4E4B5524B3F79500C6E02C /* SignUpLayoutSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4E4B5424B3F79500C6E02C /* SignUpLayoutSetting.swift */; };
 		CB4E4B5724B3F7A500C6E02C /* SignUpRxSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4E4B5624B3F7A500C6E02C /* SignUpRxSetting.swift */; };
 		CB6CFE1224AEC11C00E5A240 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6CFE1124AEC11C00E5A240 /* User.swift */; };
-		CB6CFE1424AEC16600E5A240 /* userdefault.utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6CFE1324AEC16600E5A240 /* userdefault.utils.swift */; };
+		CB6CFE1424AEC16600E5A240 /* AlamofireHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6CFE1324AEC16600E5A240 /* AlamofireHelper.swift */; };
 		CB6CFE1624AF103A00E5A240 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6CFE1524AF103A00E5A240 /* Const.swift */; };
 		CB6CFE1924AF11E500E5A240 /* ApiConf.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6CFE1824AF11E500E5A240 /* ApiConf.swift */; };
 		CB9D9D0424B5496100185575 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9D9D0324B5496100185575 /* StringExtension.swift */; };
@@ -30,6 +30,8 @@
 		CB9D9D0E24B5853F00185575 /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9D9D0D24B5853F00185575 /* UserEndpoint.swift */; };
 		CBA61BB824B305CB00A900C0 /* UIViewExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA61BB724B305CB00A900C0 /* UIViewExtesion.swift */; };
 		CBA61BBA24B316D200A900C0 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA61BB924B316D200A900C0 /* UITextFieldExtension.swift */; };
+		CBA811E724B70DC5008C72AC /* SignUpRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA811E624B70DC5008C72AC /* SignUpRouters.swift */; };
+		CBCF1EA324BBF32A00C3789A /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBCF1EA224BBF32A00C3789A /* Image.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +52,7 @@
 		CB4E4B5424B3F79500C6E02C /* SignUpLayoutSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLayoutSetting.swift; sourceTree = "<group>"; };
 		CB4E4B5624B3F7A500C6E02C /* SignUpRxSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRxSetting.swift; sourceTree = "<group>"; };
 		CB6CFE1124AEC11C00E5A240 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CB6CFE1324AEC16600E5A240 /* userdefault.utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userdefault.utils.swift; sourceTree = "<group>"; };
+		CB6CFE1324AEC16600E5A240 /* AlamofireHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHelper.swift; sourceTree = "<group>"; };
 		CB6CFE1524AF103A00E5A240 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		CB6CFE1824AF11E500E5A240 /* ApiConf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConf.swift; sourceTree = "<group>"; };
 		CB9D9D0324B5496100185575 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 		CB9D9D0D24B5853F00185575 /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
 		CBA61BB724B305CB00A900C0 /* UIViewExtesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtesion.swift; sourceTree = "<group>"; };
 		CBA61BB924B316D200A900C0 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		CBA811E624B70DC5008C72AC /* SignUpRouters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouters.swift; sourceTree = "<group>"; };
+		CBCF1EA224BBF32A00C3789A /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		EF8A1DAAD751291F6849B3B6 /* Pods-RxIntroduce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxIntroduce.debug.xcconfig"; path = "Target Support Files/Pods-RxIntroduce/Pods-RxIntroduce.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +126,7 @@
 				877C9E7B239781D400E2BD98 /* LaunchScreen.storyboard */,
 				87843F7D239E14940063A0B9 /* GoogleService-Info.plist */,
 				CB6CFE1524AF103A00E5A240 /* Const.swift */,
+				CBCF1EA224BBF32A00C3789A /* Image.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				CB9D9D0524B54D4600185575 /* SignUpViewModel.swift */,
+				CBA811E624B70DC5008C72AC /* SignUpRouters.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -218,7 +224,7 @@
 		CB6CFE0F24AEB01A00E5A240 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				CB6CFE1324AEC16600E5A240 /* userdefault.utils.swift */,
+				CB6CFE1324AEC16600E5A240 /* AlamofireHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				877C9E7D239781D400E2BD98 /* LaunchScreen.storyboard in Resources */,
+				CBCF1EA324BBF32A00C3789A /* Image.xcassets in Resources */,
 				CB1EAE8924ADC6FC003BB635 /* User.storyboard in Resources */,
 				87843F7E239E14950063A0B9 /* GoogleService-Info.plist in Resources */,
 				877C9E7A239781D400E2BD98 /* Assets.xcassets in Resources */,
@@ -400,12 +407,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA811E724B70DC5008C72AC /* SignUpRouters.swift in Sources */,
 				877C9E75239781CE00E2BD98 /* EmailLoginViewController.swift in Sources */,
 				87843F8023A029870063A0B9 /* WelcomeViewController.swift in Sources */,
 				CB4E4B5724B3F7A500C6E02C /* SignUpRxSetting.swift in Sources */,
 				877C9E73239781CE00E2BD98 /* AppDelegate.swift in Sources */,
 				CBA61BB824B305CB00A900C0 /* UIViewExtesion.swift in Sources */,
-				CB6CFE1424AEC16600E5A240 /* userdefault.utils.swift in Sources */,
+				CB6CFE1424AEC16600E5A240 /* AlamofireHelper.swift in Sources */,
 				CBA61BBA24B316D200A900C0 /* UITextFieldExtension.swift in Sources */,
 				CB9D9D0624B54D4600185575 /* SignUpViewModel.swift in Sources */,
 				CB6CFE1224AEC11C00E5A240 /* User.swift in Sources */,
