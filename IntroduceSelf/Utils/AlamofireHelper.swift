@@ -24,9 +24,12 @@ class AlamofireHelper {
     }
     
     func parsing(_ err: Error) {
-        let errStr = String(describing: err).components(separatedBy: " ").filter { str in
+        let url = String(describing: err).components(separatedBy: " ").filter { str in
+            return str.contains("NSErrorFailingURLKey=")
+        }
+        let code = String(describing: err).components(separatedBy: " ").filter { str in
             return str.contains("Code=")
         }
-        print(errStr[0])
+        print(code[0], url[0])
     }
 }
